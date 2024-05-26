@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Safe Place",
-    "slug": "safe-place",
+    "slug": "preview-safe-place",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/logo.png",
@@ -53,7 +53,7 @@
         "origin": false
       },
       "eas": {
-        "projectId": "da6f0b7b-99ec-49a2-9c24-c3458cffb9d7"
+        "projectId": "eca7c9ff-ee5f-4472-a57e-bd28882eb7f4"
       }
     },
     "owner": "wamanxx"
