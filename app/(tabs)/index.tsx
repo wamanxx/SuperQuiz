@@ -3,8 +3,11 @@ import React from 'react'
 import ListingsMap from '@/components/ListingsMap'
 import ReportButton from '@/components/ReportButton'
 import Animated, {
+  FadeIn,
+  FadeInDown,
   SlideInDown,
   SlideInLeft,
+  SlideInRight,
   SlideInUp,
   interpolate,
   useAnimatedRef,
@@ -17,7 +20,7 @@ const Page = () => {
   return (
     <View>
       <ListingsMap />
-      <Animated.View entering={SlideInDown.delay(1000)}style={{
+      <Animated.View entering={SlideInRight.delay(1000)}style={{
         
         position: 'absolute',
         bottom: 15,
