@@ -46,7 +46,7 @@ const report = () => {
 
             let { status } = await Location.requestForegroundPermissionsAsync();
             if (status !== 'granted') {
-                setErrorMsg('Permission to access location was denied');
+                setErrorMsg(`Permission d'utilisation de l'appareil photo refusée.`);
                 return;
             }
 
@@ -56,7 +56,7 @@ const report = () => {
         })();
     }, []);
 
-    let text = 'Waiting..';
+    let text = 'Waiting..'; //pour afficher et gérer l'erreur
     if (errorMsg) {
         text = errorMsg;
     } else if (location) {

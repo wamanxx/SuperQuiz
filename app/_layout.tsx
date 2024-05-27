@@ -11,7 +11,9 @@ import { UserContextProvider } from "../contexts/user.context"
 import { useUserContext } from '../contexts/user.context';
 import { ReportProvider, useReport } from '@/contexts/report.context';
 import Loading from '@/components/Loading';
+import { LogBox } from 'react-native';
 
+LogBox.ignoreAllLogs(true);
 
 export {
   // Catch any errors thrown by the Layout component.

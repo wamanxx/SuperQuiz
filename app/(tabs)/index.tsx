@@ -17,7 +17,7 @@ const Page = () => {
   return (
     <View>
       <ListingsMap />
-      <Animated.View entering={SlideInLeft.delay(1000)}style={{
+      <Animated.View entering={SlideInDown.delay(1000)}style={{
         
         position: 'absolute',
         bottom: 15,

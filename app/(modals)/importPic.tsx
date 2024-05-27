@@ -47,7 +47,7 @@ const importPic = () => {
             if (!result.canceled) {
 
                 if (!result.canceled) {
-                    await saveImage(result.assets[0].uri);;
+                    await saveImage(result.assets[0].uri);
                 }
             }
         } catch (error) {

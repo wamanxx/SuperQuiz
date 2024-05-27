@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import { Alert, StyleSheet, View, AppState, ActivityIndicator } from 'react-native'
 import { supabase } from '@/lib/supabase'
-import { Button, Input } from 'react-native-elements'
 import Colors from '@/constants/Colors'
 import { TouchableOpacity } from 'react-native'
-import { Ionicons } from '@expo/vector-icons'
 import { Text } from 'react-native-elements'
 import { TextInput } from 'react-native'
 import { defaultStyles } from '@/constants/Styles'
@@ -24,7 +22,7 @@ AppState.addEventListener('change', (state) => {
 })
 
 export default function Auth() {
-  const { login} = useUserContext();
+  const { login } = useUserContext();
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -50,25 +48,23 @@ export default function Auth() {
     <View style={styles.container}>
       <Text style={{ fontFamily: 'mon-b', color: Colors.grey }}>Adresse Mail</Text>
 
-      <TextInput keyboardType='email-address' textContentType='emailAddress'  placeholder='E-mail' value={email} onChangeText={(text) => setEmail(text) } placeholderTextColor={Colors.grey} autoCapitalize='none' style={[defaultStyles.inputField, { marginBottom: 30, fontFamily: 'mon' }]} />
+      <TextInput keyboardType='email-address' textContentType='emailAddress' placeholder='E-mail' value={email} onChangeText={(text) => setEmail(text)} placeholderTextColor={Colors.grey} autoCapitalize='none' style={[defaultStyles.inputField, { marginBottom: 30, fontFamily: 'mon' }]} />
       <Text style={{ fontFamily: 'mon-b', color: Colors.grey }}>Mot de passe</Text>
-      
+
       <TextInput placeholder='Password' secureTextEntry={true} onChangeText={(text) => setPassword(text)} value={password} placeholderTextColor={Colors.grey} autoCapitalize='none' style={[defaultStyles.inputField, { marginBottom: 30, fontFamily: 'mon' }]} />
-      <TouchableOpacity style={[defaultStyles.btn,{flexDirection:'row', alignItems:'center', justifyContent:'center', gap:14}]}
-       onPress={() => { signInWithEmail(); }}>
-        
-        
+      <TouchableOpacity style={[defaultStyles.btn, { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 14 }]}
+        onPress={() => { signInWithEmail(); }}>
         {
           loading
-          ?
-          <>
-          <ActivityIndicator color={"white"}/>
-          <Text style={[defaultStyles.btnText]} disabled={loading} >Chargement ...</Text>
-          </>
-          : <Text style={[defaultStyles.btnText]} disabled={loading} >Continuer</Text>
-        }        
-       
-        </TouchableOpacity>
+            ?
+            <>
+              <ActivityIndicator color={"white"} />
+              <Text style={[defaultStyles.btnText]} disabled={loading} >Chargement ...</Text>
+            </>
+            : <Text style={[defaultStyles.btnText]} disabled={loading} >Continuer</Text>
+        }
+
+      </TouchableOpacity>
       <View style={[styles.seperatorView]}>
         <View style={{
           borderBottomColor: '#000',
@@ -101,7 +97,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'white',
-    gap:14,
+    gap: 14,
     padding: 26,
   },
   seperatorView: {
